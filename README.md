@@ -132,6 +132,8 @@
         ```VBA:変数（文字列）
         Dim 変数名 As String
         ```
+    * 変数に使える文字について<br>
+        [Visual Basic の名前付け規則](https://learn.microsoft.com/ja-jp/office/vba/language/concepts/getting-started/visual-basic-naming-rules)（閲覧日：2022/11/30）
 * 変数の使い方
     * 数値`100`を代入する
         ```VBA:数値代入
