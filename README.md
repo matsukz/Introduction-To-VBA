@@ -12,6 +12,15 @@
     1. 開発タブをクリック
     2. `Visual Basic`をクリック
     3. `挿入`から`標準モジュール`を選択
+2. プロシージャの作成
+   ```VBA:プロシージャ作成
+   Sub マクロ名 ()
+
+   End Sub
+   ```
+   と入力します<br>
+   * マクロ名で使用できる文字について<br>
+        [Visual Basic の名前付け規則](https://learn.microsoft.com/ja-jp/office/vba/language/concepts/getting-started/visual-basic-naming-rules) （閲覧日：2022/11/30）
 
 ## セル関連
 
