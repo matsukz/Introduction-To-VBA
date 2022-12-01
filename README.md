@@ -382,6 +382,8 @@ Next i
 # 随時更新！
 * 作成：
     **Ma2kzzzz**
+* レポジトリURL：
+    https://github.com/matsukz/3-1ClassNote
 * 最終更新日：
     **2022年12月01日**
 * 皆伝レベル：
