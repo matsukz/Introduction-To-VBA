@@ -3,7 +3,7 @@
 紙媒体なら試験時に参照可ということでMarkdownの練習がてらに作成しているカンペです
 
 ### 目次
-- [テスト用まとめ](#テスト用まとめ)
+- [はじめに](#はじめに)
     - [目次](#目次)
 - [VBAの始め方](#vbaの始め方)
   - [開発の有効化](#開発の有効化)
@@ -32,6 +32,8 @@
 - [参考](#参考)
 - [随時更新！](#随時更新)
 
+<div style="page-break-before:always"></div>
+
 # VBAの始め方
 **はじめてVBAを作成するときにはExcelで設定を行う必要があります。**<br>
 ## 開発の有効化
@@ -53,6 +55,8 @@
    と入力します<br>
 * マクロ名で使用できる文字について<br>
         [Visual Basic の名前付け規則](https://learn.microsoft.com/ja-jp/office/vba/language/concepts/getting-started/visual-basic-naming-rules) （閲覧日：2022/11/30）
+
+<div style="page-break-before:always"></div>
 
 # セル関連
 ## セルの選択（絶対参照）
@@ -88,6 +92,8 @@ Cells(上下,左右)
     Cells(8+X,6+Y)
     ```
     移動させる値がマイナスになれば反対方向に動きます。
+
+<div style="page-break-before:always"></div>
 
 ## セル内の変更する
 
@@ -129,14 +135,17 @@ Cells(上下,左右)
 
     Rangeによるセルの複数選択に対応しています。
 
+<div style="page-break-before:always"></div>
+
+# シート関連
+ **初期シート以外を選択する際は予めシートを追加しておく必要があります。**<br>
+ **マクロが実行されるのは現在表示されるシート上となります。**<br>
+
 * シート内セルの全クリア
     ```VBA:クリア
     Cells.delete
     ```
 
-# シート関連
- **初期シート以外を選択する際は予めシートを追加しておく必要があります。**<br>
- **マクロが実行されるのは現在表示されるシート上となります。**<br>
 ## シートの選択（移動）
 * `sheet2`へ移動する。
     ```
@@ -148,6 +157,8 @@ Cells(上下,左右)
     ```
 
     上記の色変更などが利用できます。
+
+<div style="page-break-before:always"></div>
 
 # 計算
 ## 基本
@@ -172,6 +183,9 @@ Cells(上下,左右)
     ```VBA:シート演算
     Range("A1")=Range("B1")+Worksheets("sheet2").Range("C1")
     ```
+
+<div style="page-break-before:always"></div>
+
 # 変数
 ## 変数の型について
 
@@ -199,6 +213,8 @@ Cells(上下,左右)
     * 変数に使える文字について<br>
         [Visual Basic の名前付け規則](https://learn.microsoft.com/ja-jp/office/vba/language/concepts/getting-started/visual-basic-naming-rules)（閲覧日：2022/11/30）
 
+<div style="page-break-before:always"></div>
+
 ## 変数の使い方
 * 数値`100`を代入する
     ```VBA:数値代入
@@ -221,8 +237,9 @@ Cells(上下,左右)
     Range("A1") = 変数名
     ```
 
-# 条件分岐
+<div style="page-break-before:always"></div>
 
+# 条件分岐
 ## 基本構文
 ```VBA:IF基本
 IF 条件式1 Then
@@ -258,6 +275,9 @@ ElseIF部は **必須ではありません。** 必要に応じて消したり�
 |  AND   | A AND B |   AとB両方の条件が合致している   |
 |   OR   | A OR B  | AとBどちらかの条件に合致している |
 |  NOT   |  NOT A  |       条件に合致しないとき       |
+<br>
+<br>
+<br>
 
 * セル`A1`の値が`90`以上か判断する
     ```VBA:IF2
@@ -272,6 +292,8 @@ ElseIF部は **必須ではありません。** 必要に応じて消したり�
   ```VBA:IF4
   IF 90 <= Range("A1") And Range("A1") < 100 Then
   ```
+
+<div style="page-break-before:always"></div>
 
 # Forによる繰り返し
 
@@ -302,6 +324,8 @@ Next i
     IF同様`Next i`は自動入力されません。<br>
     IFによる条件分岐を繰り返す際は文末の**End IFを忘れないように**しましょう。
 
+<div style="page-break-before:always"></div>
+
 # その他便利機能
 ## オートフィル
 1. 数値のオートフィル<br>
@@ -311,13 +335,15 @@ Next i
     ```VBA:数値オートフィル
     Range("A1:A2").AutoFill Destination:=Range("A1:A10")
     ```
-    
+
 2. 文字列のオートフィル
 * `A1`に`月`と入力し`A1`から`A7`に一週間分の曜日を表示させる
     ```VBA:文字列オートフィル
     Range("A1").AutoFill Destination:=Range("A1:A7")
     ```
     [#セル内の変更](#セル内の変更する)による方法でセルに値を入力してもOK
+
+<div style="page-break-before:always"></div>
 
 ## メッセージボックス
 * メッセージダイアログで文字列`あほばかまぬけ`を表示する
@@ -341,11 +367,16 @@ Next i
     * メッセージボックスについて<br>
     [第23回.メッセージボックス(MsgBox関数)](https://excel-ubara.com/excelvba1/EXCELVBA323.html)（閲覧日：2022/12/01）
 
+<div style="page-break-before:always"></div>
+
 # 参考
 [Visual Studio Code拡張 Markdown All in One](https://qiita.com/kamorits/items/6f342da395ad57468ae3)（閲覧日：2022/11/30）
 
 [Qiita マークダウン記法 一覧表・チートシート](https://zenn.dev/ctrlkeykoyubi/articles/vscode-markdown-all-in-one)（閲覧日：2022/11/30）
 
 [エクセルの真髄 第23回.メッセージボックス(MsgBox関数)](https://excel-ubara.com/excelvba1/EXCELVBA323.html)（閲覧日：2022/12/01）
+
+[VScodeのMarkdownからPDF変換時に改ページを挿入](https://qiita.com/0xmks/items/4fec4116bb42120f5180)（閲覧日2022/12/01）
+
 
 # 随時更新！
