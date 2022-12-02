@@ -365,7 +365,7 @@ Next i
     ```
 * （応用）セル`A1`の内容を表示するメッセージボックスのタイトル`A1の中身は？`を設定する
     ```VBA:_4
-    MsgBox Range("C15"), vbOKOnly, "A1は？"
+    MsgBox Range("A1"), vbOKOnly, "A1の中身は？"
     ```
     * メッセージボックスについて<br>
     [第23回.メッセージボックス(MsgBox関数)](https://excel-ubara.com/excelvba1/EXCELVBA323.html)（閲覧日：2022/12/01）
