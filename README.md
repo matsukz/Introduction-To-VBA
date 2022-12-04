@@ -194,7 +194,7 @@ Cells(上下,左右)
     Range("A1")=Range("B1")+Worksheets("sheet2").Range("C1")
     ```
 
-計算式を記述する**前に計算結果を指定する**のを忘れないようにしましょう。
+計算式を記述する**前**に、計算結果を表示する場所の指定を忘れないようにしましょう。
 
 <div style="page-break-before:always"></div>
 
@@ -225,6 +225,13 @@ Cells(上下,左右)
     * 変数に使える文字について<br>
         [Visual Basic の名前付け規則](https://learn.microsoft.com/ja-jp/office/vba/language/concepts/getting-started/visual-basic-naming-rules)（閲覧日：2022/11/30）
 
+プロシージャ外で変数の宣言をすると、各プロシージャで変数の値を共有することができます。
+```VBA:Dim_Ex1
+Dim i As Byte
+Sub Hoge()
+
+End Sub
+```
 <div style="page-break-before:always"></div>
 
 ## 変数の使い方
