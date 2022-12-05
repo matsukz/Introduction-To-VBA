@@ -1,9 +1,9 @@
-# はじめに<br>
+# はじめり<br>
 
 紙媒体なら試験時に参照可ということでMarkdownの練習がてら作成しているカンペです。
 
 ### 目次
-- [はじめに](#はじめに)
+- [はじめり](#はじめり)
     - [目次](#目次)
 - [VBAの始め方](#vbaの始め方)
   - [開発の有効化](#開発の有効化)
@@ -34,7 +34,7 @@
   - [オートフィル](#オートフィル)
   - [メッセージボックス](#メッセージボックス)
 - [参考](#参考)
-- [随時更新！](#随時更新)
+- [おわりに](#おわりに)
 
 <div style="page-break-before:always"></div>
 
@@ -378,7 +378,7 @@ Next i
     ```VBA:for_1
     Dim i As Byte
     For i = 0 To 100
-        Cells(i+1,1)
+        Cells(1+1,1)
     Next i
     ```
     IF同様`Next i`は自動入力されません。<br>
@@ -388,7 +388,7 @@ Next i
     ```VBA:IF3
     Dim i As Byte
         For i = 0 To 9 Step 1
-            IF Cells(i+1,1) Mod 2 = 0 Then
+            IF Cells(1+i,1) Mod 2 = 0 Then
                 '偶数のときの処理
             Else
                 '奇数のときの処理
@@ -442,16 +442,16 @@ Next i
 <div style="page-break-before:always"></div>
 
 # 参考
-[Visual Studio Code拡張 Markdown All in One](https://qiita.com/kamorits/items/6f342da395ad57468ae3)（閲覧日：2022/11/30）
+[Visual Studio Code拡張 Markdown All in One](https://zenn.dev/ctrlkeykoyubi/articles/vscode-markdown-all-in-one)（閲覧日：2022/11/30）
 
-[Qiita マークダウン記法 一覧表・チートシート](https://zenn.dev/ctrlkeykoyubi/articles/vscode-markdown-all-in-one)（閲覧日：2022/11/30）
+[Qiita マークダウン記法 一覧表・チートシート](https://qiita.com/kamorits/items/6f342da395ad57468ae3)（閲覧日：2022/11/30）
 
 [エクセルの真髄 第23回.メッセージボックス(MsgBox関数)](https://excel-ubara.com/excelvba1/EXCELVBA323.html)（閲覧日：2022/12/01）
 
 [VScodeのMarkdownからPDF変換時に改ページを挿入](https://qiita.com/0xmks/items/4fec4116bb42120f5180)（閲覧日2022/12/01）
 
 
-# 随時更新！
+# おわりに
 * 作成：
     **Ma2kzzzz**
 * レポジトリURL：
