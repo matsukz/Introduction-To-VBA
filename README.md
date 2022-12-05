@@ -236,9 +236,10 @@ Cells(上下,左右)
     * 変数に使える文字について<br>
         [Visual Basic の名前付け規則](https://learn.microsoft.com/ja-jp/office/vba/language/concepts/getting-started/visual-basic-naming-rules)（閲覧日：2022/11/30）
 
-プロシージャ外で変数の宣言をすると、各プロシージャで変数の値を共有することができます。
+プロシージャ外で変数の宣言をすると、各プロシージャ間で同じ変数を利用できます。
 ```VBA:Dim_Ex1
 Dim 変数名 As 型
+変数名 = 
 Sub Hoge()
 
 End Sub
