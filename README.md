@@ -2,9 +2,9 @@
 
 紙媒体なら試験時に参照可ということでMarkdownの練習がてら作成しているカンペです。
 
-### 目次
+# 目次
 - [はじめり](#はじめり)
-    - [目次](#目次)
+- [目次](#目次)
 - [VBAの始め方](#vbaの始め方)
   - [開発の有効化](#開発の有効化)
   - [Visual Basic Editorの表示](#visual-basic-editorの表示)
@@ -259,7 +259,7 @@ End Sub
     ```VBA:セル代入
     変数名 = Range("A1")
     ```
-* セル`A1`と`B1`の値を足した値を代入する
+* セル`A1`と`B1`の値を合計した値を代入する
     ```VBA:計算代入
     変数名 = Range("A1") + Range("B1")
     ```
@@ -387,7 +387,7 @@ Next i
 * （応用）`A1`から`A10`に入力されている数が偶数か奇数かを判断する。
     ```VBA:IF3
     Dim i As Byte
-        For i = 0 To 9 Step 1
+        For i = 0 To 99 Step 1
             IF Cells(1+i,1) Mod 2 = 0 Then
                 '偶数のときの処理
             Else
@@ -413,7 +413,7 @@ Next i
     ```VBA:文字列オートフィル
     Range("A1").AutoFill Destination:=Range("A1:A7")
     ```
-    [#セル内の変更](#セル内の変更する)による方法でセルに値を入力してもOK
+    手入力や`Range`・`Cells`による方法でセルに値を入力してもOK
 
 <div style="page-break-before:always"></div>
 
