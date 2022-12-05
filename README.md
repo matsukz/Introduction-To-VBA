@@ -377,7 +377,7 @@ Next i
 * セル`A1`から`A100`まで下に１ずつセルを選択する
     ```VBA:for_1
     Dim i As Byte
-    For i = 0 To 100
+    For i = 0 To 99
         Cells(1+1,1)
     Next i
     ```
