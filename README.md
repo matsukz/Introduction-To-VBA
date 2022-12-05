@@ -238,7 +238,7 @@ Cells(上下,左右)
 
 プロシージャ外で変数の宣言をすると、各プロシージャで変数の値を共有することができます。
 ```VBA:Dim_Ex1
-Dim i As Byte
+Dim 変数名 As 型
 Sub Hoge()
 
 End Sub
@@ -377,7 +377,7 @@ Next i
     ```VBA:for_1
     Dim i As Byte
     For i = 0 To 100
-        Cells(1+i,1)
+        Cells(i+1,1)
     Next i
     ```
     IF同様`Next i`は自動入力されません。<br>
