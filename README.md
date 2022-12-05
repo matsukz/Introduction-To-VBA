@@ -70,12 +70,12 @@ End Sub
 
 * セル`A1`選択するだけ<br>
     ```VBA:A1の選択
-    Range("A1")
+    Range("A1").Select
     ```
 
 * セル`A1からC3`と`D5`を選択する
     ```VBA:選択応用
-    Range(A1:C3,D5)
+    Range(A1:C3,D5).Select
     ```
     `Range`での選択は複数のセル選択が可能です。<br>
     [次ページ](#セル内の変更する)の文字入力や色変更にも使用できます。
@@ -84,19 +84,19 @@ End Sub
 数値を用いてセルを選択します。[Forによる繰り返し](#forによる繰り返し)に向いています。基準は`A1`です。
 
 ```VBA:Cells
-Cells(上下,左右)
+Cells(上下,左右).Select
 ```
 * セル`A1`を選択する
     ```VBA:Cells_1
-    Cells(1,1)
+    Cells(1,1).Select
     ```
 * セル`C5`を選択する
     ```VBA:Cells_2
-    Cells(5,3)
+    Cells(5,3).Select
     ```
 * セル`F8`から下に変数`X`、右に変数`Y`移動したセルを選択する
     ```VBA:Cells_3
-    Cells(8+X,6+Y)
+    Cells(8+X,6+Y).Select
     ```
     移動させる値がマイナスになれば反対方向に動きます。
 
@@ -150,17 +150,17 @@ Cells(上下,左右)
 
 * シート内セルの全クリア
     ```VBA:クリア
-    Cells.delete
+    Cells.Delete
     ```
 
 ## シートの選択（移動）
 * `sheet2`へ移動する。
     ```
-    Worksheets("sheet2").select
+    Worksheets("sheet2").Select
     ```
 * `sheet2`のセル`A1`を選択する
     ```
-    Worksheets("sheet2").Range("A1")
+    Worksheets("sheet2").Range("A1").Select
     ```
 
     [前述](#セル内の変更する)の色変更などが利用できます。
