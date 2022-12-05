@@ -446,6 +446,8 @@ Next i
 
 [Qiita マークダウン記法 一覧表・チートシート](https://qiita.com/kamorits/items/6f342da395ad57468ae3)（閲覧日：2022/11/30）
 
+[Visual Basic の名前付け規則](https://learn.microsoft.com/ja-jp/office/vba/language/concepts/getting-started/visual-basic-naming-rules)（閲覧日：2022/11/30）
+
 [エクセルの真髄 第23回.メッセージボックス(MsgBox関数)](https://excel-ubara.com/excelvba1/EXCELVBA323.html)（閲覧日：2022/12/01）
 
 [VScodeのMarkdownからPDF変換時に改ページを挿入](https://qiita.com/0xmks/items/4fec4116bb42120f5180)（閲覧日2022/12/01）
