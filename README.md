@@ -34,8 +34,9 @@
 - [その他便利機能](#その他便利機能)
   - [オートフィル](#オートフィル)
   - [メッセージボックス](#メッセージボックス)
+  - [罫線](#罫線)
 - [参考](#参考)
-- [おわりに](#おわりに)
+- [このノートについて](#このノートについて)
 
 <div style="page-break-before:always"></div>
 
@@ -137,9 +138,9 @@ Cells(上下,左右)
     Cells(5,4).Font.ColorIndex=色コード
     ```
     色コードについて<br>
-    |  赤   | 明るい緑 |  青   |  黄   |  緑   |
-    | :---: | :------: | :---: | :---: | :---: |
-    |   3   |    4     |   5   |   6   |  10   |
+    |  黒   |  赤   | 明るい緑 |  青   |  黄   |  緑   |
+    | :---: | :---: | :------: | :---: | :---: | :---: |
+    |   1   |   3   |    4     |   5   |   6   |  10   |
 
     `Range`によるセルの複数選択に対応しています。
 
@@ -216,12 +217,12 @@ Cells(上下,左右)
 どのような内容を変数に代入するか**変数を使用する前**に指定する必要があります。<br>
 |                値の形                 |   型    | 使用RAM |  備考  |
 | :-----------------------------------: | :-----: | :-----: | :----: |
-|            0から255の正の整数             |  Byte   |   2B    |
+|          0から255の正の整数           |  Byte   |   2B    |
 |        -32,768から32,767の整数        | Integer |   2B    |
 | -2,147,483,648から2,147,483,647の整数 |  Long   |   4B    | 非推奨 |
 |           ±3.4×10^38の少数            | Single  |   4B    |        |
 |            約10×10^7の文字            | String  |   2B    |        |
-|              すべての型               | Variant | 16B   | 非推奨 |
+|              すべての型               | Variant |   16B   | 非推奨 |
 
 参考：[変数の型](https://katakago.sakura.ne.jp/pgm/vba/pgm01/var-type.html)（閲覧日：2022/12/06）
 * 整数を代入する変数の作成
@@ -373,7 +374,7 @@ Next i
 ```
 |      i       |   A    |   B    |             C              |
 | :----------: | :----: | :----: | :------------------------: |
-| 繰り返す回数 | 開始値 | 終了値 | 1回のループで増える`i`の数 |
+| 利用する変数 | 開始値 | 終了値 | 1回のループで増える`i`の数 |
 
 セル選択には[セル選択（相対参照）](#セル選択相対参照)が便利です。
 
@@ -381,7 +382,7 @@ Next i
     ```VBA:for_1
     Dim i As Byte
     For i = 0 To 99
-        Cells(1+1,1).Select
+        Cells(1+i,1).Select
     Next i
     ```
 
@@ -453,7 +454,48 @@ Nextに対応するForがありません。
 
 <div style="page-break-before:always"></div>
 
+## 罫線
+```VBA:Border
+罫線を引く範囲.BorderAround 線のスタイル定数, 線の太さ定数, 色コード
+```
+* 枠線を引く範囲には[3ページ](#セル関連)の`Range`や`Cells`が利用できます。
+* 色コードには[4ページ](#セル内の変更する)の`ColorIndex`が利用できます。
+
+* 線のスタイルについて
+    | 罫線の種類 |      定数       |
+    | :--------: | :-------------: |
+    |   線なし   | xlLineStyleNone |
+    |   一重線   |  xlContinuous   |
+    |   二重線   |    xlDouble     |
+    |    破線    |     xlDash      |
+    |  一点鎖線  |    xlDashDot    |
+    |  二点鎖線  |  xlDashDotDot   |
+    |    点線    |      xlDot      |
+    |   斜破線   | xlSlantDashDot  |
+* 線の太さについて
+    |  太さ  |    定数    |
+    | :----: | :--------: |
+    | 極細線 | xlHairline |
+    |  細線  |   xlThin   |
+    | 中太線 |  xlMedium  |
+    |  太線  |  xlThick   |
+
+* セル`C1`の周りに赤色の細い破線を引く
+```VBA:Border_1
+Range("C1").BorderAround xlDash, xlThin, 3
+```
+* セル`C1`から`G5`の周りに青色の太い一重線を引く
+```VBA:Border_2
+Range("C1:G5").BorderAround xlContinuous, xlThick, 5
+```
+
+<div style="page-break-before:always"></div>
+<ノート>
+<div style="page-break-before:always"></div>
+
 # 参考
+FOM出版　よくわかるMicrosoft Excel 2019/2016/2013 マクロ/VBA
+
 [Visual Studio Code拡張 Markdown All in One](https://zenn.dev/ctrlkeykoyubi/articles/vscode-markdown-all-in-one)（閲覧日：2022/11/30）
 
 [Qiita マークダウン記法 一覧表・チートシート](https://qiita.com/kamorits/items/6f342da395ad57468ae3)（閲覧日：2022/11/30）
@@ -467,13 +509,13 @@ Nextに対応するForがありません。
 [VScodeのMarkdownからPDF変換時に改ページを挿入](https://qiita.com/0xmks/items/4fec4116bb42120f5180)（閲覧日2022/12/01）
 
 
-# おわりに
+# このノートについて
 * 作成：
     **matsukz**
 * レポジトリURL：
     https://github.com/matsukz/3-1ClassNote
 * 最終更新日：
-    **2022年12月06日**
+    **2022年12月07日**
 * 皆伝レベル：
     **１**
 * 初音ミクのキャラクターランク：
