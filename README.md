@@ -415,12 +415,12 @@ Forループ内でForループを行います。<br>
     Dim i As Byte
     Dim j As Byte
     
-    For i = 0 To 4 Step 1
-        For j = 0 To 9 Step 1
-            If Cells(1 + j, 1 + i) Mod 2 = 0 Then
-                Cells(1 + j, 1 + i).Interior.ColorIndex = 6
+    For j = 0 To 4 Step 1
+        For i = 0 To 9 Step 1
+            If Cells(1 + i, 1 + j) Mod 2 = 0 Then
+                Cells(1 + i, 1 + j).Interior.ColorIndex = 6
             Else
-                Cells(1 + j, 1 + i).Interior.ColorIndex = 5
+                Cells(1 + i, 1 + j).Interior.ColorIndex = 5
             End If
         Next j     
     Next i
@@ -428,7 +428,7 @@ Forループ内でForループを行います。<br>
     * 変数の意味
         |      i       |   j    |
         | :----------: | :----: |
-        | 左右（AからE） | 上下（1から10） |
+        | 上下（1から10） | 左右（AからE） |
 <div style="page-break-before:always"></div>
 
 
