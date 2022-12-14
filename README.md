@@ -31,6 +31,7 @@
 - [Forによる繰り返し](#forによる繰り返し)
   - [基本構文](#基本構文-1)
   - [よくあるエラー（繰り返しと条件分岐の組み合わせ）](#よくあるエラー繰り返しと条件分岐の組み合わせ)
+  - [関数のネスト](#関数のネスト)
 - [その他便利機能](#その他便利機能)
   - [オートフィル](#オートフィル)
   - [メッセージボックス](#メッセージボックス)
@@ -365,7 +366,7 @@ End IF
 特定の操作を任意の回数繰り返すことができます。
 ## 基本構文
 
-**数値に対応した変数を設定しておく必要があります。**
+**数値に対応した変数を作成する必要があります。**
 ```VBA:For基本
 Dim i As Byte
 For i = A to B Step C
@@ -387,9 +388,9 @@ Next i
     ```
 
 * （応用）`A1`から`A10`に入力されている数が偶数か奇数かを判断する
-    ```VBA:IF3
+    ```VBA:for_2
     Dim i As Byte
-        For i = 0 To 99 Step 1
+        For i = 0 To 9 Step 1
             IF Cells(1+i,1) Mod 2 = 0 Then
                 '偶数のときの処理
             Else
@@ -405,6 +406,31 @@ Nextに対応するForがありません。
 →End IFを忘れていませんか？
 
 <div style="page-break-before:always"></div>
+
+## 関数のネスト
+Forループ内でForループを行います。<br>
+**Forループの数だけ数値に対応した変数が必要です。**
+* `A1`から`E10`に入力されている数値が偶数ならセルの色を`青`にし、奇数なら`黄色`にする
+    ```VBA:for_3
+    Dim i As Byte
+    Dim j As Byte
+    
+    For i = 0 To 4 Step 1
+        For j = 0 To 9 Step 1
+            If Cells(1 + j, 1 + i) Mod 2 = 0 Then
+                Cells(1 + j, 1 + i).Interior.ColorIndex = 6
+            Else
+                Cells(1 + j, 1 + i).Interior.ColorIndex = 5
+            End If
+        Next j     
+    Next i
+    ```
+    * 変数の意味
+        |      i       |   j    |
+        | :----------: | :----: |
+        | 左右（AからE） | 上下（1から10） |
+<div style="page-break-before:always"></div>
+
 
 # その他便利機能
 ## オートフィル
@@ -490,11 +516,9 @@ Range("C1:G5").BorderAround xlContinuous, xlThick, 5
 ```
 
 <div style="page-break-before:always"></div>
-<ノート>
-<div style="page-break-before:always"></div>
 
 # 参考
-FOM出版　よくわかるMicrosoft Excel 2019/2016/2013 マクロ/VBA
+FOM出版　よくわかるMicrosoft Excel 2019/2016/2013 マクロ/VBA 
 
 [Visual Studio Code拡張 Markdown All in One](https://zenn.dev/ctrlkeykoyubi/articles/vscode-markdown-all-in-one)（閲覧日：2022/11/30）
 
@@ -515,10 +539,10 @@ FOM出版　よくわかるMicrosoft Excel 2019/2016/2013 マクロ/VBA
 * レポジトリURL：
     https://github.com/matsukz/3-1ClassNote
 * 最終更新日：
-    **2022年12月08日**
+    **2022年12月14日**
 * 皆伝レベル：
     **１**
 * 初音ミクのキャラクターランク：
-    **59**
+    **60**
 * 彼女：
     **なし**
