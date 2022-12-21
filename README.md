@@ -32,6 +32,7 @@
   - [基本構文](#基本構文-1)
   - [よくあるエラー（繰り返しと条件分岐の組み合わせ）](#よくあるエラー繰り返しと条件分岐の組み合わせ)
   - [関数のネスト](#関数のネスト)
+  - [繰り返し合計](#繰り返し合計)
 - [その他便利機能](#その他便利機能)
   - [オートフィル](#オートフィル)
   - [メッセージボックス](#メッセージボックス)
@@ -418,18 +419,35 @@ Forループ内でForループを行います。<br>
     
     For j = 0 To 4 Step 1
         For i = 0 To 9 Step 1
-            If Cells(1 + i, 1 + j) Mod 2 = 0 Then
-                Cells(1 + i, 1 + j).Interior.ColorIndex = 6
+            If Cells(1+i,1+j) Mod 2 = 0 Then
+                Cells(1+i,1+j).Interior.ColorIndex = 6
             Else
-                Cells(1 + i, 1 + j).Interior.ColorIndex = 5
+                Cells(1+i,1+j).Interior.ColorIndex = 5
             End If
         Next j     
     Next i
     ```
-    * 変数の意味
-        |      i       |   j    |
-        | :----------: | :----: |
-        | 上下（1から10） | 左右（AからE） |
+    |      i       |   j    |
+    | :----------: | :----: |
+    | 上下（1から10） | 左右（AからE） |
+    * カラーコードについては[4ページ](#セル内の変更する)を参照
+
+## 繰り返し合計
+繰り返し処理の中で計算を行います。
+* セル`A1`から`A5`のセルで偶数のセルを合計する
+    ```VBA:for_4
+    Dim i As Byte
+    Dim Goukei As Integer
+    Goukei = 0
+    For i = 0 to 4 Step 1
+        If Cells(1+i,1) Mod 2 = 0 Then
+            Goukei = Goukei + Cells(1+i,1)
+        Else
+        End If
+    Next i
+    ```
+    * 合計を代入する変数をループ前に**初期化**する必要があります。（ここでは`0`）
+    * `Cells(i+1,1)`が奇数の場合はなにもしないため、Else部は空白にしています。
         
 <div style="page-break-before:always"></div>
 
