@@ -173,7 +173,7 @@ Cells(上下,左右)
 実行エラー'9':
 インデックスが有効な範囲にありません。
  ```
-  →存在しないワークシートを選択しようとしているので、シートの数や名前を確認してください。
+  →存在しないワークシートを選択しようとしていませんか？
 
 <div style="page-break-before:always"></div>
 
@@ -246,7 +246,7 @@ Cells(上下,左右)
 Dim 変数名 As 型
 変数名 = 値
 Sub Hoge()
-
+    '処理
 End Sub
 ```
 <div style="page-break-before:always"></div>
@@ -541,7 +541,7 @@ FOM出版　よくわかるMicrosoft Excel 2019/2016/2013 マクロ/VBA
 * レポジトリURL：
     https://github.com/matsukz/3-1ClassNote
 * 最終更新日：
-    **2022年12月20日**
+    **2022年12月21日**
 * 皆伝レベル：
     **１**
 * 初音ミクのキャラクターランク：
