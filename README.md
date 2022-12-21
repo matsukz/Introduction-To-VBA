@@ -61,7 +61,8 @@ Sub マクロ名 ()
 End Sub
 ```
 `Sub`と`End Sub`の間に処理を記述します。<br>
-実行するには`開発`タブ内の`マクロ`を選択します。
+実行するには`開発`タブ内の`マクロ`を選択します。<br>
+Visual Basic Editor上で`F5`キーの入力でも実行することができます。
 
 * マクロ名で使用できる文字について<br>
         [Visual Basic の名前付け規則](https://learn.microsoft.com/ja-jp/office/vba/language/concepts/getting-started/visual-basic-naming-rules) （閲覧日：2022/11/30）
