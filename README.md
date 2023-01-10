@@ -462,7 +462,7 @@ Forループ内でForループを行います。<br>
     Range("A1:A2").AutoFill Destination:=Range("A1:A10")
     ```
 
-1. 文字列のオートフィル
+2. 文字列のオートフィル
 * `A1`に`月`と入力し`A1`から`A7`に一週間分の曜日を表示する
     ```VBA:文字列オートフィル
     Range("A1").AutoFill Destination:=Range("A1:A7")
@@ -559,10 +559,10 @@ FOM出版　よくわかるMicrosoft Excel 2019/2016/2013 マクロ/VBA
 * レポジトリURL：
     https://github.com/matsukz/3-1ClassNote
 * 最終更新日：
-    **2022年12月21日**
+    **2023年01月11日**
 * 皆伝レベル：
     **１**
 * 初音ミクのキャラクターランク：
-    **60**
+    **63**
 * 彼女：
     **なし**
