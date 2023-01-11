@@ -434,20 +434,23 @@ Forループ内でForループを行います。<br>
 
 ## 繰り返し合計
 繰り返し処理の中で計算を行います。
-* セル`A1`から`A5`のセルで偶数のセルを合計する
+* セル`A1`から`C5`のセルで奇数のセルを合計する
     ```VBA:for_4
     Dim i As Byte
+    Dim j As Byte
     Dim Goukei As Integer
     Goukei = 0
-    For i = 0 to 4 Step 1
-        If Cells(1+i,1) Mod 2 = 0 Then
-            Goukei = Goukei + Cells(1+i,1)
-        Else
-        End If
-    Next i
+    For j = 0 To 2 Step 1
+        For i = 0 To 4 Step 1
+            If Cells(1 + i, 1 + j) Mod 2 = 0 Then
+            Else
+                Goukei = Goukei + Cells(1 + i, 1 + j)
+            End If
+        Next i
+    Next j
     ```
     * 合計を代入する変数をループ前に**初期化**する必要があります。（ここでは`0`）
-    * `Cells(i+1,1)`が奇数の場合はなにもしないため、Else部は空白にしています。
+    * `Cells(1+i,1+j)`が偶数の場合はなにもしないため、IF部は空白にしています。
         
 <div style="page-break-before:always"></div>
 
