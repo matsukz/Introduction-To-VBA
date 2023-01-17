@@ -442,9 +442,9 @@ Forループ内でForループを行います。<br>
     Goukei = 0
     For j = 0 To 2 Step 1
         For i = 0 To 4 Step 1
-            If Cells(1 + i, 1 + j) Mod 2 = 0 Then
+            If Cells(1+i,1+j) Mod 2 = 0 Then
             Else
-                Goukei = Goukei + Cells(1 + i, 1 + j)
+                Goukei = Goukei + Cells(1+i,1+j)
             End If
         Next i
     Next j
@@ -562,7 +562,7 @@ FOM出版　よくわかるMicrosoft Excel 2019/2016/2013 マクロ/VBA
 * レポジトリURL：
     https://github.com/matsukz/3-1ClassNote
 * 最終更新日：
-    **2023年01月11日**
+    **2023年01月18日**
 * 皆伝レベル：
     **１**
 * 初音ミクのキャラクターランク：
